@@ -1,4 +1,15 @@
 go mod init <name/name>
 go mod tidy
 go mod edit -replace example.com/greetings=../greetings | add string to go.mod file
+
 go test -v
+
+go build command compiles the packages, along with their dependencies, but it doesn't install the results.
+go install command compiles and installs the packages
+
+go list command to discover the install path
+go list -f '{{.Target}}'
+
+Add the Go install directory to your system's shell path | export PATH=/Users/vnk/yandex-cloud/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/vnk/Library/Python/3.9/bin:/usr/local/go/bin:/Users/vnk/yandex-cloud/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/vnk/go/bin:/path/to/your/install/directory
+As an alternative you can change the install target by setting the GOBIN variable using the go env command | go env -w GOBIN=/path/to/your/bin
+Once you've updated the shell path | go install + hello (example)
