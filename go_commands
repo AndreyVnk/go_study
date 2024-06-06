@@ -1,5 +1,5 @@
 go mod init <name/name>
-go mod tidy
+go mod tidy | go get .
 go mod edit -replace example.com/greetings=../greetings | add string to go.mod file
 
 go test -v
