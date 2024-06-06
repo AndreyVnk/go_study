@@ -1,0 +1,6 @@
+1. connect to database: mysql -u root -p 
+2. mysql> create database recordings;
+3. mysql> use recordings;
+    Database changed
+4. create-tables.sql to hold SQL script
+5. use the source command to run the script: mysql> source /path/to/create-tables.sql
